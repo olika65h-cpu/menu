@@ -1,0 +1,102 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Меню ресторана</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Ресторан "Гурмания"</h1>
+      <p class="tagline">Свежие блюда, гармония вкусов</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Фильтры -->
+    <section class="filters" aria-label="Фильтры меню">
+      <button class="filter-btn active" data-category="все">Все</button>
+      <button class="filter-btn" data-category="закуски">Закуски</button>
+      <button class="filter-btn" data-category="первые">Первые блюда</button>
+      <button class="filter-btn" data-category="основные">Основные</button>
+      <button class="filter-btn" data-category="десерты">Десерты</button>
+    </section>
+
+    <!-- Секция меню -->
+    <section class="menu-grid" id="menu">
+      <!-- Продукты будут вставляться здесь через HTML или JS -->
+      <article class="menu-item" data-category="закуски">
+        <img src="https://avatars.mds.yandex.net/get-vertis-journal/4080458/4921765c-b1d7-4c6d-b6b8-01edb0698f69.jpeg/1600x1600" alt="Брускетты" />
+        <div class="item-content">
+          <h3>Брускетта с помидорами и базиликом</h3>
+          <p class="description">Хрустящие кусочки хлеба, свежие помидоры, базилик, оливковое масло.</p>
+          <div class="price-controls">
+            <span class="price">1890 ₸</span>
+            <button class="btn" data-action="add" data-name="Брускетта с помидорами">Добавить</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-item" data-category="первые">
+        <img src="https://www.koolinar.ru/all_image/article/4/4222/article-b74acd8e-6ff9-4782-b39f-5b4bd15d806b_large.jpg" alt="Уха" />
+        <div class="item-content">
+          <h3>Уха по-домашнему</h3>
+          <p class="description">Сочной рыбы, ароматные специи, зелень.</p>
+          <div class="price-controls">
+            <span class="price">2690 ₸</span>
+            <button class="btn" data-action="add" data-name="Уха по-домашнему">Добавить</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-item" data-category="основные">
+        <img src="https://avatars.mds.yandex.net/get-vertis-journal/4080458/803222cd-55cd-40fc-9ecc-6a804525d074.jpg/1600x1600" alt="Стейк" />
+        <div class="item-content">
+          <h3>Стейк из говядины</h3>
+          <p class="description">Ресторанное качество, жар сегодня по желанию: rare, medium, well-done.</p>
+          <div class="price-controls">
+            <span class="price">9500 ₸</span>
+            <button class="btn" data-action="add" data-name="Стейк из говядины">Добавить</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-item" data-category="десерты">
+        <img src="https://i.pinimg.com/originals/4c/d7/f2/4cd7f29457f10a7e3b6bc2c50c4d88df.jpg?nii=t" alt="Чизкейк" />
+        <div class="item-content">
+          <h3>Чизкейк Нью-Йорк</h3>
+          <p class="description">Классика с кисло-сладким вкусом и хрустящей корочкой.</p>
+          <div class="price-controls">
+            <span class="price">1990 ₸</span>
+            <button class="btn" data-action="add" data-name="Чизкейк Нью-Йорк">Добавить</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Добавляйте больше блюд по аналогии -->
+    </section>
+
+    <!-- Корзина (минимальная версия) -->
+    <aside class="cart" aria-label="Корзина">
+      <h2>Корзина</h2>
+      <ul id="cart-items"></ul>
+      <p class="empty" id="empty-cart">Корзина пуста</p>
+      <div class="cart-total" id="cart-total" hidden>
+        <span>Итого:</span>
+        <strong id="total-sum">0 ₸</strong>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Ресторан "Гурмания". Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
